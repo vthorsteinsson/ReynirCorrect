@@ -78,6 +78,111 @@ def test_verb_af(rc):
     s = "Hver leitar af skrifstofuhúsnæði?"
     check_sentence(rc, s, [(1, 2, "P_WRONG_PREP_AF")])
 
+    s = "Hann dáist endalaust af þeim."
+    check_sentence(rc, s, [(1, 3, "P_WRONG_PREP_AF")])
+
+    s = "Hann hefur lengi dáðst af þeim."
+    check_sentence(rc, s, [(3, 4, "P_WRONG_PREP_AF")])
+
+    s = "Jón gerir grín af því."
+    check_sentence(rc, s, [(1, 3, "P_WRONG_PREP_AF")])
+
+    s = "Þetta er mesta vitleysa sem ég hef gert grín af."
+    check_sentence(rc, s, [(7, 9, "P_WRONG_PREP_AF")])
+
+    s = "Jón kann það ekki utan af."
+    check_sentence(rc, s, [(4, 5, "P_WRONG_PREP_AF")])
+
+    s = "Jón leggur hann ekki af velli."
+    check_sentence(rc, s, [(1, 5, "P_WRONG_PREP_AF")])
+
+    s = "Jón hefur ekki lagt hann af velli."
+    check_sentence(rc, s, [(3, 6, "P_WRONG_PREP_AF")])
+
+    s = "Jón leiðir líkur af því."
+    check_sentence(rc, s, [(1, 3, "P_WRONG_PREP_AF")])
+
+    s = "Jón leiðir ekki líkur af því."
+    check_sentence(rc, s, [(1, 5, "P_WRONG_PREP_AF")])
+
+    s = "Jón leiðir rök af því."
+    check_sentence(rc, s, [(1, 3, "P_WRONG_PREP_AF")])
+
+    s = "Jón leitar af því."
+    check_sentence(rc, s, [(1, 2, "P_WRONG_PREP_AF")])
+
+    s = "Tíminn markar upphaf af því."
+    check_sentence(rc, s, [(1, 4, "P_WRONG_PREP_AF")])
+
+    s = "Tíminn markar ekki upphaf af því."
+    check_sentence(rc, s, [(1, 5, "P_WRONG_PREP_AF")])
+
+    s = "Það markar upphafið af því."
+    check_sentence(rc, s, [(1, 3, "P_WRONG_PREP_AF")])
+
+    s = "Það markar ekki upphafið af því."
+    check_sentence(rc, s, [(1, 5, "P_WRONG_PREP_AF")])
+
+    s = "Það hefur ekki markað upphafið af því."
+    check_sentence(rc, s, [(1, 5, "P_WRONG_PREP_AF")])
+
+#    s = "Jón spyr af því."
+#    check_sentence(rc, s, [(1, 2, "P_WRONG_PREP_AF")])
+
+#    s = "Það sem Jón spurði ekki af var óljóst."
+#    check_sentence(rc, s, [(3, 5, "P_WRONG_PREP_AF")])
+
+#    s = "Jón stuðlar af því."
+#    check_sentence(rc, s, [(1, 2, "P_WRONG_PREP_AF")])
+
+    s = "Honum varð af ósk sinni."
+    check_sentence(rc, s, [(1, 4, "P_WRONG_PREP_AF")])
+
+    s = "Honum hafði orðið af ósk sinni."
+    check_sentence(rc, s, [(2, 5, "P_WRONG_PREP_AF")])
+
+    s = "Honum varð ekki af ósk sinni."
+    check_sentence(rc, s, [(1, 5, "P_WRONG_PREP_AF")])
+
+    s = "Hann varð ekki uppvís af því."
+    check_sentence(rc, s, [(1, 5, "P_WRONG_PREP_AF")])
+
+    s = "Jón varð vitni af þessu."
+    check_sentence(rc, s, [(1, 3, "P_aðaf")])
+
+
+def test_noun_af(rc):
+    s = "Hann gerði þetta af beiðni hennar."
+    check_sentence(rc, s, [(3, 4, "P_WRONG_PREP_AF")])
+    s = "Af beiðni hennar gerði hann þetta."
+    check_sentence(rc, s, [(0, 1, "P_WRONG_PREP_AF")])
+    s = "Það var gert af þeirri fyrirmynd."
+    check_sentence(rc, s, [(3, 5, "P_WRONG_PREP_AF")])
+    s = "Þau gera þetta af heiðnum sið."
+    check_sentence(rc, s, [(3, 5, "P_WRONG_PREP_AF")])
+    s = "Ég baka köku af því tilefni."
+    check_sentence(rc, s, [(3, 5, "P_WRONG_PREP_AF")])
+    s = "Þau veittu mér aðgang af kerfinu."
+    check_sentence(rc, s, [(3, 4, "P_WRONG_PREP_AF")])
+    s = "Aðgangur af kerfinu var veittur."
+    check_sentence(rc, s, [(0, 1, "P_WRONG_PREP_AF")])
+    s = "Drög af verkefninu eru tilbúin."
+    check_sentence(rc, s, [(0, 1, "P_WRONG_PREP_AF")])
+    s = "Þau kláruðu drög af verkefninu."
+    check_sentence(rc, s, [(2, 3, "P_WRONG_PREP_AF")])
+    s = "Grunnur af verkefninu er tilbúinn."
+    check_sentence(rc, s, [(0, 1, "P_WRONG_PREP_AF")])
+    s = "Hann lagði ekki grunninn af verkefninu."
+    check_sentence(rc, s, [(3, 4, "P_WRONG_PREP_AF")])
+    s = "Þau gerðu leit af dótinu."
+    check_sentence(rc, s, [(2, 3, "P_WRONG_PREP_AF")])
+    s = "Leit af dótinu hefur ekki skilað árangri."
+    check_sentence(rc, s, [(0, 1, "P_WRONG_PREP_AF")])
+    s = "Þetta er lykillinn af velgengni."
+    check_sentence(rc, s, [(2, 3, "P_WRONG_PREP_AF")])
+    s = "Hann gaf mér uppskriftina af réttinum."
+    check_sentence(rc, s, [(3, 4, "P_WRONG_PREP_AF")])
+
 
 def test_verb_að(rc):
     s = "Ég er ekki hluti að heildinni."
@@ -96,20 +201,20 @@ def test_verb_að(rc):
     check_sentence(rc, s, [(1, 5, "P_WRONG_PREP_AÐ")])
     s = "Ég hef áhyggjur að því að honum líði illa."
     check_sentence(rc, s, [(1, 8, "P_WRONG_PREP_AÐ")])
-    #s = "Ég lagði ekki mikið að mörkum."
-    #check_sentence(rc, s, [(4, 5, "P_WRONG_PREP_AÐ")])  # !!! TODO: No annotation
-    #s = "Ég hafði lagt mikið að mörkum."
-    #check_sentence(rc, s, [(4, 5, "P_WRONG_PREP_AÐ")])  # !!! TODO: No annotation
-    s = "Sama hvað ég gerði lagði ég mikið að mörkum."
-    check_sentence(rc, s, [(7, 8, "P_WRONG_PREP_AÐ")])
+#    s = "Ég lagði ekki mikið að mörkum."
+#    check_sentence(rc, s, [(4, 5, "P_WRONG_PREP_AÐ")])
+#    s = "Ég hafði lagt mikið að mörkum."
+#    check_sentence(rc, s, [(4, 5, "P_WRONG_PREP_AÐ")])
+#    s = "Sama hvað ég gerði lagði ég mikið að mörkum."
+#    check_sentence(rc, s, [(7, 8, "P_WRONG_PREP_AÐ")])
     s = "Ég heillast að þannig fólki."
     check_sentence(rc, s, [(1, 2, "P_WRONG_PREP_AÐ")])
-    s = "Ég lét gott að mér leiða."
-    check_sentence(rc, s, [(1, 5, "P_WRONG_PREP_AÐ")])
+#    s = "Ég lét gott að mér leiða."
+#    check_sentence(rc, s, [(1, 5, "P_WRONG_PREP_AÐ")])
     s = "Hún á heiðurinn að þessu."
-    check_sentence(rc, s, [(2, 3, "P_WRONG_PREP_AÐ")])
+    check_sentence(rc, s, [(1, 3, "P_WRONG_PREP_AÐ")])
     s = "Hún hafði ekki átt heiðurinn að þessu en fékk heiðurinn að þessu."
-    check_sentence(rc, s, [(4, 5, "P_WRONG_PREP_AÐ"), (9, 11, "P_WRONG_PREP_AÐ")])
+    check_sentence(rc, s, [(2, 5, "P_WRONG_PREP_AÐ"), (9, 11, "P_WRONG_PREP_AÐ")])
     s = "Hún hlaut heiðurinn að þessu."
     check_sentence(rc, s, [(2, 4, "P_WRONG_PREP_AÐ")])
 #    s = "Hún á heilan helling að börnum."
@@ -124,8 +229,8 @@ def test_verb_að(rc):
     check_sentence(rc, s, [(4, 6, "P_WRONG_PREP_AÐ")])
     s = "Hætta hefur aldrei stafað að þessu."
     check_sentence(rc, s, [(1, 5, "P_WRONG_PREP_AÐ")])
-    s = "Hún er ólétt að sínu þriðja barni."
-    check_sentence(rc, s, [(2, 3, "P_WRONG_PREP_AÐ")])
+#    s = "Hún er ólétt að sínu þriðja barni."
+#    check_sentence(rc, s, [(2, 3, "P_WRONG_PREP_AÐ")])
     s = "Hann hefur ekki heyrt að lausa starfinu."
     check_sentence(rc, s, [(2, 4, "P_WRONG_PREP_AÐ")])
     s = "Ég hef aldrei haft gaman að henni."

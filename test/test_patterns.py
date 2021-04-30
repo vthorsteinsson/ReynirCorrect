@@ -85,9 +85,9 @@ def test_verb_að(rc):
     s = "Við höfum öll verið hluti að heildinni."
     check_sentence(rc, s, [(1, 6, "P_WRONG_PREP_AÐ")])
     s = "Vissulega er hægt að vera hluti að heildinni."
-    check_sentence(rc, s, [(1, 7, "P_VeraAð"), (4, 7, "P_WRONG_PREP_AÐ")])  # !!! TODO
-    #s = "Þeir sögðu að ég hefði verið hluti að heildinni."
-    #check_sentence(rc, s, [(6, 7, "P_WRONG_PREP_AÐ")])  # !!! TODO: No annotation
+    check_sentence(rc, s, [(1, 7, "P_VeraAð"), (4, 7, "P_WRONG_PREP_AÐ")])
+#    s = "Þeir sögðu að ég hefði verið hluti að heildinni."
+#    check_sentence(rc, s, [(6, 7, "P_WRONG_PREP_AÐ")])
     s = "Þar að leiðandi virkar þetta."
     check_sentence(rc, s, [(0, 2, "P_WRONG_PREP_AÐ")])
     s = "Þetta virkar þar að leiðandi."
@@ -96,10 +96,10 @@ def test_verb_að(rc):
     check_sentence(rc, s, [(1, 5, "P_WRONG_PREP_AÐ")])
     s = "Ég hef áhyggjur að því að honum líði illa."
     check_sentence(rc, s, [(1, 8, "P_WRONG_PREP_AÐ")])
-    #s = "Ég lagði ekki mikið að mörkum."
-    #check_sentence(rc, s, [(4, 5, "P_WRONG_PREP_AÐ")])  # !!! TODO: No annotation
-    #s = "Ég hafði lagt mikið að mörkum."
-    #check_sentence(rc, s, [(4, 5, "P_WRONG_PREP_AÐ")])  # !!! TODO: No annotation
+#    s = "Ég lagði ekki mikið að mörkum."
+#    check_sentence(rc, s, [(4, 5, "P_WRONG_PREP_AÐ")])
+#    s = "Ég hafði lagt mikið að mörkum."
+#    check_sentence(rc, s, [(4, 5, "P_WRONG_PREP_AÐ")])
     s = "Sama hvað ég gerði lagði ég mikið að mörkum."
     check_sentence(rc, s, [(7, 8, "P_WRONG_PREP_AÐ")])
     s = "Ég heillast að þannig fólki."

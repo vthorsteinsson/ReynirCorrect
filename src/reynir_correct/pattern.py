@@ -1422,7 +1422,7 @@ class PatternMatcher:
             cls.add_pattern(
                 (
                     "frétt",  # Trigger lemma for this pattern
-                    "( IP|VP ) > { NP > { 'frétt' } VP > { PP > { 'að' } } }",
+                    "( IP|VP ) > { NP > { 'frétt' } VP > { PP > { P > { 'að' } } } }",
                     cls.wrong_preposition_frettir_að,
                     None,
                 )
@@ -1431,7 +1431,7 @@ class PatternMatcher:
             cls.add_pattern(
                 (
                     "frétt",  # Trigger lemma for this pattern
-                    "NP > { 'frétt' PP > { 'að' } }",
+                    "NP > { 'frétt' PP > { P > { 'að' } } }",
                     cls.wrong_preposition_frettir_að,
                     None,
                 )

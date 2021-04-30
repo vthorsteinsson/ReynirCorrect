@@ -1942,7 +1942,7 @@ def fix_capitalization(
         # !!! if token.error is not None
         if token.kind in {TOK.WORD, TOK.PERSON, TOK.ENTITY}:
             if is_wrong(token):
-                if token.txt.islower():
+                if token.txt.islower() or "-" in token.txt and token.txt.split("-")[0].islower():
                     # Token is lowercase but should be capitalized
                     original_txt = token.txt
                     # !!! TODO: Maybe the following should be just token.txt.capitalize()
